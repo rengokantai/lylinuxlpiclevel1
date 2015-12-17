@@ -14,6 +14,29 @@ usermod -G gpname username
 cp -r olddir/ newdir/
 ```
 
+- Logs & More File Management Tools
+```
+tail -f secure
+```
+
+cat multiple files:
+```
+cat cron secure > all.log
+```
+less command. e->one line down y->one line up b->one page up f->one page down
+
+- File Permissions
+
+show user belongs group
+```
+groups username
+```
+- 
+
+
+
+
+
 - screen
 install dev tools:
 Fedora
