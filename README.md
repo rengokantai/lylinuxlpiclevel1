@@ -1,4 +1,19 @@
 #### lylinuxlpiclevel1
+- Root User, Sudo Users And Setting Up Your User Account
+```
+cd /etc/sudoers
+visudo
+```
+Add a user to group
+```
+usermod -G gpname username
+```
+
+- Navigating Linux & The File System
+```
+cp -r olddir/ newdir/
+```
+
 - screen
 install dev tools:
 Fedora
@@ -24,7 +39,7 @@ screen -list
 Check:
 ```
 screen(create new screen, or `screen -S yourname` to create new session)
-w
+w (all logged in users)
 uptime
 screen -list
 ```
