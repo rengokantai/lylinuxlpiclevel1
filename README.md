@@ -272,6 +272,16 @@ format:
 ```
 fmt file.txt
 ```
+- File Viewing Commands For The Linux Bash Shell
+Only moniter specific words
+```
+tail -f xx.txt | grep word
+```
+sed (substitute)
+```
+sed 's/old/new/g' filename
+```
+
 
 
 - screen
