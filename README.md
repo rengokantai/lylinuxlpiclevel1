@@ -115,6 +115,51 @@ renice:
 renice -n -20 -p 1234 (pid)
 renice -n -20 -u username
 ```
+- Killing Processes In Linux
+```
+kill -9 pid(force kill)
+kill -1 pid(restart)
+kill -15 pid(normal shutdown)
+nohup (commands) execute after shutdown(immune)
+```
+- Using The uname Command To Query System Information
+```
+uname -o (os name)
+uname -s (kernel name)
+uname -n (network host name)
+uname -m (cpu/arch)
+uname -v (kernel version)
+uname -r (kernel release)
+uname -i (hardware)
+uname -a (all)
+```
+
+- Background VS Foreground processes
+for example
+```
+nano
+```
+press ctrl z turn to background
+fg to return
+
+To see all jobs,
+```
+jobs
+fg 1
+```
+to launch in background, append &
+```
+command &
+```
+- The nohup Command
+- The free Command
+```
+free -b/-m
+free -s 2 (set interval) similar to top -d 2
+```
+
+
+
 - screen
 install dev tools:
 Fedora
