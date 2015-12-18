@@ -281,6 +281,32 @@ sed (substitute)
 ```
 sed 's/old/new/g' filename
 ```
+- Disk Quotas
+```
+apt-get install quota quotatool
+```
+Check:
+```
+sudo quotacheck -avugm
+```
+Edit:
+```
+edquota username
+```
+repquota
+```
+repquota /
+repquota -s (human readable format)
+```
+-  Upstart Overview
+```
+runlevel
+initctl list
+```
+```
+init-ckeckconf xx.conf
+telinit 4
+```
 
 
 
