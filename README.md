@@ -165,6 +165,59 @@ find / -group name
 find / -size +1M
 ```
 
+- Creating And Mounting A Disk Partition
+```
+mkfs -t ext4 /dev/xvdf
+```
+
+- Using fdisk, Creating A File System, and Configuring Mount Entry With /etc/fstab
+```
+cd dev/
+fdisk 
+n
+p
+
+```
+- Working With Linux Swap
+```
+dd if=/dev/zero of=~/swap.swp bs=1024 count=800k
+mkswap swap.swp
+swapon swap.swp
+free -m
+```
+
+release swap:
+```
+swapoff -a
+```
+
+- du, df and mount
+- fsck and e2fsck
+- mke2fs and debugfs
+```
+mke2fs -t ext4 /dev/xvdf
+```
+- dumpe2fs and tune2fs
+```
+dumpe2fs /dev/sda1
+```
+- xfs tools
+- Exercise: File System Integrity and Maintenance
+Display both the volume name and UUID of the root drive on your server and capture the results in your output file.
+```
+ls -al /dev/disk/by-uuid >> file.out && ls -al /dev/disk/by-partlabel >> file.out 
+lsblk -o partlabel,uuid >> file.out
+blkid >> file.out
+```
+Set the root partition of your server to the following:
+i. Volume Name: SysUtilLab4
+ii. Maximum Number of Mounts Before Check: 50
+iii. Current Number of Mounts: 55
+iv. Interval Between Checks: 2 Days
+```
+sudo tune2fs -L SysUtilLab4 -c 50 -C 55 -i 2d /dev/xvda1
+```
+
 - screen
 install dev tools:
 Fedora
