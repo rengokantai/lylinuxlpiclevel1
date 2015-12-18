@@ -157,8 +157,13 @@ command &
 free -b/-m
 free -s 2 (set interval) similar to top -d 2
 ```
-
-
+- Find Command
+```
+find . -type f/d -name 'cron*'
+find /home -perm 777 -exec chmod 555 {} \;
+find / -group name
+find / -size +1M
+```
 
 - screen
 install dev tools:
