@@ -13,6 +13,10 @@ usermod -G gpname username
 ```
 cp -r olddir/ newdir/
 ```
+copy to home dic:
+```
+cp /etc/hosts ~/;
+```
 
 - Logs & More File Management Tools
 ```
@@ -31,12 +35,86 @@ show user belongs group
 ```
 groups username
 ```
-- 
+- Cron Jobs
 
+```
+cd /etc
+vim crontab
+```
+should remember the sequence:
+min, hour, day of month, month, day of week
 
+OR create own cron
+```
+cd /var/spool/cron
+crontab -e
+```
+- Introduction To Linux Package Managers
+```
+apt-cache search apache2
+```
+- top
+many shortcuts.
+For example.k = kill
+- Finding Files
+locate( rarely used)
+```
+updatedb
+yum install locate
+locate filename
+```
+find
+```
+find . -name 'filename*'
+```
 
+- Exercise: Using FIND to Find and Manipulate Files
 
+Using the find command, change the permissions on the /etc/myTesT.txt file so that it is universal read/write/execute. This should be done in one line using the find command options only.
+```
+sudo find / -name myTesT.txt -exec chmod 777 {} \;
+```
 
+With the find command, using root or sudo privileges, display all executable files in /usr directory.
+
+```
+sudo find /usr -perm /a=x
+```
+
+- wc, split, cat, and diff commands
+```
+split -l 2 filename
+```
+- Using ps To Manage Processes
+```
+ps -w
+ps -U username
+ps -U username --forest (show hiarachy)
+ps -i
+ps -e (all running process)
+```
+- Using TOP
+```
+top -d 1 (update every 1 second)
+top -p numbers (assignprocess to moniter) Ex: top -p 1,2,3
+top -n 5 (Execute 5 times)
+
+```
+press 's' to change delay
+
+- Using nice To Change Linux Process Priorities
+-20 is highest level. 19 is lowest
+```
+default is 10.
+To assign,
+nice -n 10 progname
+nice -10 progname
+```
+renice:
+```
+renice -n -20 -p 1234 (pid)
+renice -n -20 -u username
+```
 - screen
 install dev tools:
 Fedora
