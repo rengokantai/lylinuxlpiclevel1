@@ -218,6 +218,62 @@ iv. Interval Between Checks: 2 Days
 sudo tune2fs -L SysUtilLab4 -c 50 -C 55 -i 2d /dev/xvda1
 ```
 
+
+- Simple Commands & Shortcuts For The Linux Shell
+time command
+```
+time ls
+```
+ctrl x backspace (clear current line)
+
+-  Environment Variables, Redirection Operators & Data Pipes
+```
+export VAR="new"
+echo $VAR
+```
+To remove environ var:
+```
+unset VAR
+```
+check env:
+```
+env
+```
+standard output:
+```
+tac < x.txt
+```
+- Manipulating Files
+```
+touch test1
+sort test1 >> test1.txt
+touch test2
+sort test2 >> test2.txt
+join test1 test2
+```
+paste a file's content to another file:
+```
+paste oldfile newfile
+```
+'translate', substitute
+```
+tr worda wordb < text.txt (substitute a to b)
+```
+count line numbers:
+```
+nl file.txt
+cat -n file.txt
+```
+count unique:
+```
+cat -n file.txt |uniq
+```
+format:
+```
+fmt file.txt
+```
+
+
 - screen
 install dev tools:
 Fedora
