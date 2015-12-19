@@ -307,7 +307,18 @@ initctl list
 init-ckeckconf xx.conf
 telinit 4
 ```
-
+- SysVinit Vs Systemd
+```
+systemctl -t help
+systemd.unit
+```
+- Using Systemd With Services And Service Unit Files
+```
+yum install httpd
+locate httpd.service
+cat /usr/lib/systemd/system/httpd.service
+systemctl status httpd.service
+```
 
 
 - screen
