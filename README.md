@@ -85,6 +85,24 @@ sudo find /usr -perm /a=x
 ```
 split -l 2 filename
 ```
+- grep, egrep, and fgrep
+```
+grep ^beginwith file
+grep -c ^beginwith file (return count)
+grep [z] file
+grep -f formatfile testtargetfile
+grep -lr cron /etc (search file name)
+```
+```
+egrep -i 'hello.*world' filename (-i,insensitive)
+egrep -i 'hello|world' filename (or)
+egrep -i 'hello|world' filename | grep -v donotwant
+```
+fgrep(all literal,no escape)
+```
+fgrep ^hello filename
+```
+
 - Using ps To Manage Processes
 ```
 ps -w
